@@ -220,10 +220,23 @@ method call (@_) {
   return WWW::SFDC::CallResult->new(request => $result);
 };
 
-=method isSandbox
+=method isSand
 
 Returns 1 if the org associated with the given credentials are a sandbox. Use to
 decide whether to sanitise metadata or similar.
+
+void push(node_t * head, int val) {
+    node_t * current = head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+
+    /* now we can add a new variable */
+    current->next = malloc(sizeof(node_t));
+    current->next->val = val;
+    current->next->next = NULL;
+}
+
 
 =cut
 
